@@ -1,0 +1,229 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Noto Sans', sans-serif;
+    overflow: hidden;
+}
+
+body * {
+    box-sizing: border-box;
+    background-color: #101729;
+}
+/*-------------Cabeçalho-----------------*/
+.logo-container {
+    display: flex; 
+    align-items: center; 
+    padding: 20px;
+}
+
+.logo-container img {
+    height: 80px; 
+    width: auto; 
+    margin-right: 10px;
+}
+
+.logo-text {
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo-container h2 {
+    margin: 0; 
+    color: black; 
+}
+
+.logo-container p {
+    margin: 0; 
+    color: white; 
+    font-size: 10px;
+}
+
+.menu {
+    margin-left: auto;
+    position: relative;
+    z-index: 10; 
+}
+
+.menu a {
+    background-color: blue;
+    margin-left: 20px; 
+    text-decoration: none;
+    color: black; 
+    font-weight: bold;
+    width: 100%;
+    padding: 10px 15px;
+    margin: 25px 0;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px black;
+}
+
+.menu a:hover {
+    background-color: blue;
+    color: #3d1b69;
+}
+.logo-text span{
+    color: blue;
+}
+/*------------------Conteúdo Principal----------------------*/
+#principal {
+    width: 100vw;
+    height: calc(100vh - 120px); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.esquerda {
+    width: 50vw;
+    height: 100%;
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 40px;
+}
+
+.esquerda a{
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 10px;
+    width: 200px;
+    background-image: linear-gradient(to right, #A33FEB, #C93FB0,#DF3A9A, #E73D85, #FB3D5E) ;
+    text-align: center;
+}
+/*--------------------Login--------------------*/
+.titulo {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.textlogin {
+    color: #1E39A5;
+    font-weight: 800;
+    margin: 0;
+}
+
+.direita {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardlogin {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background: #101729;
+    border-radius: 20px;
+    box-shadow: 0px 10px 80px #1E39A5;
+}
+
+.textcard {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.textcard input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #514869;
+    color: #f0ffffde;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.textcard input::placeholder {
+    color: #f0ffff94;
+}
+
+.textcard label {
+    color: #f0ffffde;
+    margin-bottom: 10px;
+}
+
+.login {
+    width: 100%;
+    padding: 16px 0;
+    margin: 25px 0;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #2b134b;
+    background-color: #1E39A5;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px black;
+}
+
+.login:hover {
+    background-color: blue;
+    color: #3d1b69;
+}
+/*-------------------------Media Querys--------------------------*/
+@media only screen and (max-width: 950px) {
+    .cardlogin {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #principal {
+        flex-direction: column;
+    }
+
+    .titulo {
+        display: none;
+    }
+
+    .esquerda, .direita {
+        width: 100%;
+        height: auto;
+    }
+
+    .cardlogin {
+        width: 90%;
+    }
+
+    .logo-container img {
+        height: 60px;
+    }
+
+    .logo-container h2 {
+        font-size: 20px;
+    }
+
+    .logo-container p {
+        font-size: 14px;
+    }
+}
